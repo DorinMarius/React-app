@@ -7,8 +7,16 @@ import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.config.dev';
 
+import passport from 'passport';
+import mongoose from 'mongoose';
+
 import users from './routes/users'
 import auth from './routes/auth'
+
+mongoose.connect(config.database);
+mongoose.connection.on('connected',()=>{
+  console.log("connected to database "+ config.database);
+});
 
 let app = express();
 

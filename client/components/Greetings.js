@@ -4,7 +4,7 @@ class Greetings extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        <h1>Hi :-)</h1>
+        <h1>Jogging Track App</h1>
       </div>
     );
   }
